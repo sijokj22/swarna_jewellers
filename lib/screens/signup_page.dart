@@ -16,80 +16,97 @@ class _SignupPageState extends State<SignupPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SingleChildScrollView(
-        child: Container(
-          child: Padding(
-            padding: EdgeInsets.symmetric(horizontal: 30.0, vertical: 30.0),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.stretch,
-              children: [
-                Image.asset('images/logo2.png'),
-                SizedBox(
-                  height: 60.0,
+        child: Padding(
+          padding: EdgeInsets.symmetric(horizontal: 30.0, vertical: 60.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              Image.asset('images/logo2.png'),
+              SizedBox(
+                height: 60.0,
+              ),
+              Text(
+                'Sign Up',
+                style: TextStyle(
+                  fontFamily: 'Raleway',
+                  fontWeight: FontWeight.bold,
+                  fontSize: 22.0,
                 ),
-                Text(
-                  'Sign Up',
-                  style: TextStyle(
-                    fontFamily: 'Raleway',
-                    fontWeight: FontWeight.bold,
-                    fontSize: 22.0,
+              ),
+              SizedBox(
+                height: 30.0,
+              ),
+              UserInput(
+                labelText: 'Name',
+                hintText: 'Your name here',
+              ),
+              SizedBox(
+                height: 30.0,
+              ),
+              UserInput(
+                labelText: 'Mobile Number',
+                hintText: 'Enter your Mobile Number here',
+                textInputType: TextInputType.number,
+              ),
+              SizedBox(
+                height: 20.0,
+              ),
+              Row(
+                crossAxisAlignment: CrossAxisAlignment.end,
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Checkbox(
+                    activeColor: Color(0xffa5302e),
+                    value: value,
+                    onChanged: (bool value) {
+                      setState(() {
+                        this.value = value;
+                      });
+                    },
                   ),
-                ),
-                SizedBox(
-                  height: 30.0,
-                ),
-                UserInput(
-                  labelText: 'Name',
-                  hintText: 'Your name here',
-                ),
-                SizedBox(
-                  height: 30.0,
-                ),
-                UserInput(
-                  labelText: 'Mobile Number',
-                  hintText: 'Enter your Mobile Number here',
-                  textInputType: TextInputType.number,
-                ),
-                SizedBox(
-                  height: 20.0,
-                ),
-                Row(
-                  crossAxisAlignment: CrossAxisAlignment.end,
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: [
-                    Checkbox(
-                      activeColor: Color(0xffa5302e),
-                      value: value,
-                      onChanged: (bool value) {
-                        setState(() {
-                          this.value = value;
-                        });
-                      },
-                    ),
-                    Expanded(
-                      child: Text(
-                        'I agree to the Terms of Services and Privacy Policies',
-                        overflow: TextOverflow.clip,
+                  Expanded(
+                    child: RichText(
+                      text: TextSpan(
+                        text: 'I agree to the ',
                         style: kTermsTextStyle,
+                        children: <TextSpan>[
+                          TextSpan(text: 'Terms of Services', style: TextStyle(fontWeight: FontWeight.bold,
+                            color: Color(0xffa5302e),
+                            fontFamily: 'Raleway'
+                          ),),
+                          TextSpan(text: ' and ',style: kTermsTextStyle),
+                          TextSpan(text: ' Privacy Policies ',style: TextStyle(fontWeight: FontWeight.bold,
+                              color: Color(0xffa5302e),
+                              fontFamily: 'Raleway'
+                          ),
+                          ),
+                        ],
                       ),
                     ),
-                  ],
-                ),
-                SizedBox(
-                  height: 30.0,
-                ),
-                Button(
-                  buttonText: 'Get OTP',
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => OtpScreen(),
-                      ),
-                    );
-                  },
-                )
-              ],
-            ),
+                  ),
+                  // Expanded(
+                  //   child: Text(
+                  //     'I agree to the Terms of Services and Privacy Policies',
+                  //     style: kTermsTextStyle,
+                  //   ),
+                  // ),
+                ],
+              ),
+              SizedBox(
+                height: 30.0,
+              ),
+              Button(
+                buttonText: 'Get OTP',
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => OtpScreen(),
+                    ),
+                  );
+                },
+              )
+            ],
           ),
         ),
       ),

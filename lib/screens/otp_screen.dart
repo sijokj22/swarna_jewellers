@@ -15,7 +15,7 @@ class _OtpScreenState extends State<OtpScreen> {
     return Scaffold(
         body: SingleChildScrollView(
       child: Padding(
-        padding: const EdgeInsets.all(30.0),
+        padding: const EdgeInsets.symmetric(horizontal: 30.0,vertical: 70.0),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -42,6 +42,7 @@ class _OtpScreenState extends State<OtpScreen> {
                       fontFamily: 'Raleway',
                       fontSize: 14.0,
                       color: Color(0xffa5302e),
+                      fontWeight: FontWeight.bold,
                     ),
                   ),
                 ),
