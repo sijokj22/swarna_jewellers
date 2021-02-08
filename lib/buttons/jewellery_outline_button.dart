@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:swarna_jewellers/common/enum.dart';
 
 import '../styles.dart';
@@ -18,13 +19,13 @@ class JewelleryOutlineButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.only(right: 10.0),
+      padding: EdgeInsets.only(right: Get.width * 0.05),
       child: GestureDetector(
         onTap: () {
           onPressed(jewelleryType);
         },
         child: Container(
-          width: 90,
+          width: Get.width * 0.26,
           decoration: BoxDecoration(
             color: (jewelleryType == selectedJewelleryType)
                 ? Color(0xffa5302e)
@@ -32,10 +33,10 @@ class JewelleryOutlineButton extends StatelessWidget {
             border: Border.all(
               color: Color(0xffa5302e),
             ),
-            borderRadius: BorderRadius.circular(10.0),
+            borderRadius: BorderRadius.circular(Get.width * 0.03),
           ),
           child: Padding(
-            padding: const EdgeInsets.all(8.0),
+            padding: EdgeInsets.all(Get.width * 0.02),
             child: Center(
               child: Text(
                 buttonText,

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:swarna_jewellers/widgets/CustomisedBottomNavigationBar.dart';
 import 'package:swarna_jewellers/widgets/customised_bottom_navy_bar.dart';
 import 'package:swarna_jewellers/widgets/image_container.dart';
@@ -50,12 +51,12 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
           Container(
             width: double.infinity,
-            height: 150.0,
+            height: Get.height * 0.23,
             decoration: BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.only(
-                  bottomLeft: Radius.circular(20.0),
-                  bottomRight: Radius.circular(20.0),
+                  bottomLeft: Radius.circular(Get.width * 0.06),
+                  bottomRight: Radius.circular(Get.width * 0.06),
                 )),
             child: Image.asset('images/logo2.png'),
           ),

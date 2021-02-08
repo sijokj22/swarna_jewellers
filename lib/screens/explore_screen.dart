@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:swarna_jewellers/screens/jewellery_page.dart';
 import 'package:swarna_jewellers/screens/try_on.dart';
 import 'package:swarna_jewellers/widgets/CustomisedBottomNavigationBar.dart';
@@ -21,9 +22,8 @@ class _ExploreScreenState extends State<ExploreScreen> {
     return Scaffold(
       drawer: Drawer(),
       appBar: AppBar(
-        titleSpacing: 50.0,
+        titleSpacing: Get.width * 0.16,
         title: Image.asset('images/logo3.png'),
-        elevation: 0.0,
         shadowColor: Colors.white,
         backgroundColor: Colors.white,
         iconTheme: IconThemeData(
@@ -31,7 +31,7 @@ class _ExploreScreenState extends State<ExploreScreen> {
         ),
         actions: [
           Padding(
-            padding: EdgeInsets.only(right: 10.0),
+            padding: EdgeInsets.only(right: Get.width * 0.05),
             child: GestureDetector(
               onTap: () {
                 Navigator.push(
@@ -52,7 +52,8 @@ class _ExploreScreenState extends State<ExploreScreen> {
             CustomisedCarouselSlider(),
             RateContainer(),
             Padding(
-              padding: EdgeInsets.only(left: 20.0, top: 20.0),
+              padding: EdgeInsets.only(
+                  left: Get.width * 0.05, top: Get.height * 0.03),
               child: Column(
                 children: [
                   Align(
@@ -64,7 +65,7 @@ class _ExploreScreenState extends State<ExploreScreen> {
                     ),
                   ),
                   SizedBox(
-                    height: 10.0,
+                    height: Get.height * 0.015,
                   ),
                   SingleChildScrollView(
                     scrollDirection: Axis.horizontal,
@@ -75,79 +76,81 @@ class _ExploreScreenState extends State<ExploreScreen> {
                           imageAddress: 'images/gold.jpg',
                         ),
                         SizedBox(
-                          width: 20.0,
+                          width: Get.width * 0.055,
                         ),
                         CustomisedCircleAvatar(
                           circleAvatarName: 'Diamond',
                           imageAddress: 'images/diamond.jpg',
                         ),
                         SizedBox(
-                          width: 20.0,
+                          width: Get.width * 0.055,
                         ),
                         CustomisedCircleAvatar(
                           circleAvatarName: 'Necklace',
                           imageAddress: 'images/Necklace.jpg',
                         ),
                         SizedBox(
-                          width: 20.0,
+                          width: Get.width * 0.055,
                         ),
                         CustomisedCircleAvatar(
                           circleAvatarName: 'Rings',
                           imageAddress: 'images/rings.jpg',
                         ),
                         SizedBox(
-                          width: 20.0,
+                          width: Get.width * 0.055,
                         ),
                         CustomisedCircleAvatar(
                           circleAvatarName: 'Bangles',
                           imageAddress: 'images/bangles.jpg',
                         ),
                         SizedBox(
-                          width: 20.0,
+                          width: Get.width * 0.055,
                         ),
                         CustomisedCircleAvatar(
                           circleAvatarName: 'Gold',
                           imageAddress: 'images/gold.jpg',
                         ),
                         SizedBox(
-                          width: 20.0,
+                          width: Get.width * 0.055,
                         ),
                         CustomisedCircleAvatar(
                           circleAvatarName: 'Diamond',
                           imageAddress: 'images/diamond.jpg',
                         ),
                         SizedBox(
-                          width: 20.0,
+                          width: Get.width * 0.055,
                         ),
                         CustomisedCircleAvatar(
                           circleAvatarName: 'Necklace',
                           imageAddress: 'images/Necklace.jpg',
                         ),
                         SizedBox(
-                          width: 20.0,
+                          width: Get.width * 0.055,
                         ),
                         CustomisedCircleAvatar(
                           circleAvatarName: 'Rings',
                           imageAddress: 'images/rings.jpg',
                         ),
                         SizedBox(
-                          width: 20.0,
+                          width: Get.width * 0.055,
                         ),
                         CustomisedCircleAvatar(
                           circleAvatarName: 'Bangles',
                           imageAddress: 'images/bangles.jpg',
                         ),
                         SizedBox(
-                          width: 20.0,
+                          width: Get.width * 0.055,
                         ),
                       ],
                     ),
                   ),
                   SizedBox(
-                    height: 30.0,
+                    height: Get.height * 0.05,
                   ),
                   Padding(
-                    padding: EdgeInsets.only(right: 10.0),
+                    padding: EdgeInsets.only(
+                      right: Get.width * 0.03,
+                    ),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -182,7 +185,7 @@ class _ExploreScreenState extends State<ExploreScreen> {
                     ),
                   ),
                   SizedBox(
-                    height: 20.0,
+                    height: Get.height * 0.03,
                   ),
                   SingleChildScrollView(
                     scrollDirection: Axis.horizontal,
@@ -193,28 +196,28 @@ class _ExploreScreenState extends State<ExploreScreen> {
                           jewelleryName: 'The Jali Earrings',
                         ),
                         SizedBox(
-                          width: 20.0,
+                          width: Get.width * 0.05,
                         ),
                         RecommendedProduct(
                           imageName: 'jewellery5.png',
                           jewelleryName: 'The Pearl Earrings',
                         ),
                         SizedBox(
-                          width: 20.0,
+                          width: Get.width * 0.05,
                         ),
                         RecommendedProduct(
                           imageName: 'jewellery4.png',
                           jewelleryName: 'The Jali Earrings',
                         ),
                         SizedBox(
-                          width: 20.0,
+                          width: Get.width * 0.05,
                         ),
                         RecommendedProduct(
                           imageName: 'jewellery5.png',
                           jewelleryName: 'The Pearl Earrings',
                         ),
                         SizedBox(
-                          width: 20.0,
+                          width: Get.width * 0.05,
                         ),
                       ],
                     ),

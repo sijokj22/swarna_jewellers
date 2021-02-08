@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:swarna_jewellers/buttons/button.dart';
 import 'package:swarna_jewellers/screens/home_screen.dart';
 import 'package:swarna_jewellers/widgets/UserInput.dart';
@@ -15,21 +16,24 @@ class _OtpScreenState extends State<OtpScreen> {
     return Scaffold(
         body: SingleChildScrollView(
       child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 30.0,vertical: 70.0),
+        padding: EdgeInsets.symmetric(
+          horizontal: Get.width * 0.06,
+          vertical: Get.height * 0.15,
+        ),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             Image.asset('images/logo2.png'),
             SizedBox(
-              height: 60.0,
+              height: Get.height * 0.08,
             ),
             UserInput(
               labelText: 'OTP',
               hintText: 'Enter your OTP',
             ),
             SizedBox(
-              height: 10.0,
+              height: Get.height * 0.015,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.end,
@@ -49,7 +53,7 @@ class _OtpScreenState extends State<OtpScreen> {
               ],
             ),
             SizedBox(
-              height: 50.0,
+              height: Get.height * 0.08,
             ),
             Button(
               buttonText: 'Verify',

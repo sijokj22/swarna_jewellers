@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:get/get.dart';
 import 'package:swarna_jewellers/buttons/jewellery_outline_button.dart';
 import 'package:swarna_jewellers/buttons/jewellery_raised_button.dart';
 import 'package:swarna_jewellers/common/enum.dart';
@@ -7,7 +8,6 @@ import 'package:swarna_jewellers/screens/try_on.dart';
 import 'package:swarna_jewellers/styles.dart';
 import 'package:swarna_jewellers/widgets/CustomisedBottomNavigationBar.dart';
 import 'package:swarna_jewellers/widgets/RateContainer.dart';
-import 'package:swarna_jewellers/widgets/customised_bottom_navy_bar.dart';
 import 'package:swarna_jewellers/widgets/customised_carousel_slider.dart';
 import 'package:swarna_jewellers/widgets/jewellery_containers.dart';
 
@@ -26,7 +26,7 @@ class _JewelleryPageState extends State<JewelleryPage> {
     return Scaffold(
       drawer: Drawer(),
       appBar: AppBar(
-        titleSpacing: 50.0,
+        titleSpacing: Get.width * 0.16,
         title: Image.asset('images/logo3.png'),
         elevation: 0.0,
         shadowColor: Colors.white,
@@ -36,7 +36,7 @@ class _JewelleryPageState extends State<JewelleryPage> {
         ),
         actions: [
           Padding(
-            padding: EdgeInsets.only(right: 10.0),
+            padding: EdgeInsets.only(right: Get.width * 0.05),
             child: GestureDetector(
               onTap: () {
                 Navigator.push(
@@ -61,19 +61,23 @@ class _JewelleryPageState extends State<JewelleryPage> {
               children: [
                 JewelleryRaisedButton(buttonText: 'SORT BY'),
                 SizedBox(
-                  width: 4.0,
+                  width: Get.width * 0.012,
                 ),
                 JewelleryRaisedButton(buttonText: 'FILTER BY'),
               ],
             ),
             Padding(
-              padding: EdgeInsets.symmetric(vertical: 20.0),
+              padding: EdgeInsets.symmetric(vertical: Get.width * 0.06),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   JewelleryOutlineButton(
                     buttonText: 'All',
-                    onPressed: (JewelleryType jewelleryType) {},
+                    onPressed: (JewelleryType jewelleryType) {
+                      setState(() {
+                        selectedJewelleryType = jewelleryType;
+                      });
+                    },
                     selectedJewelleryType: selectedJewelleryType,
                     jewelleryType: JewelleryType.All,
                   ),
@@ -107,7 +111,7 @@ class _JewelleryPageState extends State<JewelleryPage> {
               image2Address: 'images/jewelleries/jewellery2.png',
             ),
             SizedBox(
-              height: 10.0,
+              height: Get.height * 0.014,
             ),
             JewelleryContainers(
               jewellery1Name: 'Hara',
@@ -116,7 +120,7 @@ class _JewelleryPageState extends State<JewelleryPage> {
               image2Address: 'images/jewelleries/jewellery4.png',
             ),
             SizedBox(
-              height: 10.0,
+              height: Get.height * 0.014,
             ),
             JewelleryContainers(
               jewellery1Name: 'EarRings',
@@ -124,7 +128,6 @@ class _JewelleryPageState extends State<JewelleryPage> {
               image1Address: 'images/jewelleries/jewellery5.png',
               image2Address: 'images/jewelleries/jewellery6.png',
             ),
-            //SizedBox(height: 10.0,),
           ],
         ),
       ),

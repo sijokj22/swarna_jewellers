@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class CustomisedCircleAvatar extends StatelessWidget {
-
   final String imageAddress;
   final String circleAvatarName;
 
@@ -16,7 +16,7 @@ class CustomisedCircleAvatar extends StatelessWidget {
           backgroundColor: Colors.white,
         ),
         SizedBox(
-          height: 10.0,
+          height: Get.height * 0.015,
         ),
         Text(
           circleAvatarName,

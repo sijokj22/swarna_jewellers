@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:get/get.dart';
 import 'package:swarna_jewellers/styles.dart';
 import 'package:swarna_jewellers/widgets/CustomisedBottomNavigationBar.dart';
 import 'package:swarna_jewellers/widgets/customised_bottom_navy_bar.dart';
@@ -23,7 +24,7 @@ class _TryOnState extends State<TryOn> {
       appBar: AppBar(
         elevation: 0.0,
         backgroundColor: Colors.white,
-        titleSpacing: 50.0,
+        titleSpacing: Get.width * 0.16,
         title: Image.asset('images/logo3.png'),
         iconTheme: IconThemeData(
           color: Colors.black,
@@ -69,7 +70,7 @@ class _TryOnState extends State<TryOn> {
                           color: Color(0xffa5302e),
                         ),
                         SizedBox(
-                          width: 10.0,
+                          width: Get.width * 0.02,
                         ),
                         Text(
                           'Try All',
@@ -82,7 +83,7 @@ class _TryOnState extends State<TryOn> {
               ),
             ),
             SizedBox(
-              height: 15.0,
+              height: Get.height * 0.02,
             ),
             Padding(
               padding: EdgeInsets.symmetric(

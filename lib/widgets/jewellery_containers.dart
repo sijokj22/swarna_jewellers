@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:swarna_jewellers/screens/camera_page.dart';
 import 'package:swarna_jewellers/screens/shopping_cart.dart';
 import 'package:swarna_jewellers/styles.dart';
@@ -48,8 +49,8 @@ class _JewelleryContainersState extends State<JewelleryContainers> {
                 ),
               ),
               Positioned(
-                top: 10.0,
-                right: 10.0,
+                top: Get.height * 0.01,
+                right: Get.width * 0.02,
                 child: GestureDetector(
                   onTap: () {
                     setState(() {
@@ -64,8 +65,8 @@ class _JewelleryContainersState extends State<JewelleryContainers> {
                 ),
               ),
               Positioned(
-                bottom: 10.0,
-                right: 10.0,
+                bottom: Get.height * 0.01,
+                right: Get.width * 0.03,
                 child: GestureDetector(
                   onTap: () {
                     Navigator.push(context,
@@ -78,8 +79,8 @@ class _JewelleryContainersState extends State<JewelleryContainers> {
                 ),
               ),
               Positioned(
-                bottom: 10.0,
-                left: 10.0,
+                bottom: Get.height * 0.011,
+                left: Get.width * 0.03,
                 child: Text(
                   'Swarna \n22k Gold ${widget.jewellery1Name}',
                   style: kJewelleryTextStyle,
@@ -89,7 +90,7 @@ class _JewelleryContainersState extends State<JewelleryContainers> {
           ),
         ),
         SizedBox(
-          width: 10.0,
+          height: Get.width * 0.014,
         ),
         Container(
           height: MediaQuery.of(context).size.height * 0.35,
@@ -112,8 +113,8 @@ class _JewelleryContainersState extends State<JewelleryContainers> {
                 ),
               ),
               Positioned(
-                top: 10.0,
-                right: 10.0,
+                top: Get.height * 0.01,
+                right: Get.width * 0.02,
                 child: GestureDetector(
                   onTap: () {
                     setState(() {
@@ -128,8 +129,8 @@ class _JewelleryContainersState extends State<JewelleryContainers> {
                 ),
               ),
               Positioned(
-                bottom: 10.0,
-                right: 10.0,
+                bottom: Get.height * 0.01,
+                right: Get.width * 0.03,
                 child: GestureDetector(
                   onTap: () {
                     Navigator.push(context,
@@ -142,8 +143,8 @@ class _JewelleryContainersState extends State<JewelleryContainers> {
                 ),
               ),
               Positioned(
-                bottom: 10.0,
-                left: 10.0,
+                bottom: Get.height * 0.011,
+                left: Get.width * 0.03,
                 child: Text(
                   'Swarna \n22k Gold ${widget.jewellery2Name}',
                   style: kJewelleryTextStyle,

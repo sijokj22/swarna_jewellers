@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:swarna_jewellers/screens/jewellery_page.dart';
 
 class RecommendedProduct extends StatelessWidget {
@@ -18,7 +19,9 @@ class RecommendedProduct extends StatelessWidget {
         height: MediaQuery.of(context).size.height * 0.33,
         width: MediaQuery.of(context).size.width * 0.49,
         decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(20.0),
+          borderRadius: BorderRadius.circular(
+            Get.width * 0.07,
+          ),
           color: Colors.grey[200],
         ),
         child: Stack(
@@ -30,10 +33,10 @@ class RecommendedProduct extends StatelessWidget {
                 height: MediaQuery.of(context).size.height * 0.08,
                 width: MediaQuery.of(context).size.width * 0.49,
                 decoration: BoxDecoration(
-                  color: Colors.white70,
+                  color: Colors.white60,
                   borderRadius: BorderRadius.only(
-                    bottomRight: Radius.circular(20.0),
-                    bottomLeft: Radius.circular(20.0),
+                    bottomRight: Radius.circular(Get.width * 0.07),
+                    bottomLeft: Radius.circular(Get.width * 0.07),
                   ),
                 ),
                 child: RichText(

@@ -36,7 +36,7 @@ class _CustomisedCarouselSliderState extends State<CustomisedCarouselSlider> {
               autoPlayAnimationDuration: Duration(milliseconds: 800),
               autoPlayCurve: Curves.fastOutSlowIn,
               scrollDirection: Axis.horizontal,
-              height: 190,
+              height: Get.height * 0.277,
               onPageChanged: (index, reason) {
                 setState(() {
                   _current = index;

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import '../styles.dart';
 
 class JewelleryRaisedButton extends StatelessWidget {
@@ -13,7 +14,7 @@ class JewelleryRaisedButton extends StatelessWidget {
         onPressed: () {},
         color: Colors.black,
         child: Container(
-          height: 48,
+          height: Get.height * 0.08,
           child: Center(
             child: Text(
               buttonText,

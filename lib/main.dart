@@ -8,6 +8,7 @@ import 'package:swarna_jewellers/screens/jewellery_page.dart';
 import 'package:swarna_jewellers/screens/otp_screen.dart';
 import 'package:swarna_jewellers/screens/shopping_cart.dart';
 import 'package:swarna_jewellers/screens/signup_page.dart';
+import 'package:swarna_jewellers/screens/splash_screen.dart';
 import 'package:swarna_jewellers/screens/try_on.dart';
 
 List<CameraDescription> cameras;
@@ -22,7 +23,8 @@ class SwarnaJewellers extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      initialRoute: SignupPage.id,
+      initialRoute: SplashScreen.id,
+      debugShowCheckedModeBanner: false,
       routes: {
         AppLaunchScreen.id: (context) => AppLaunchScreen(),
         SignupPage.id: (context) => SignupPage(),
@@ -33,6 +35,7 @@ class SwarnaJewellers extends StatelessWidget {
         ShoppingCart.id: (context) => ShoppingCart(),
         TryOn.id: (context) => TryOn(),
         CameraPage.id: (context) => CameraPage(),
+        SplashScreen.id: (context) => SplashScreen(),
       },
     );
   }
